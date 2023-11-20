@@ -1,5 +1,6 @@
 # OpenAI-TTS-Text-Reader
 想体验一下openai新出的tts，发现效果惊人，但没找到可以用的插件，所以自己写一个。
+
 **script link**:[greasyfork](https://greasyfork.org/scripts/480382-openai-tts-text-reader)
 
 **English:**
