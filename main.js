@@ -7,7 +7,7 @@
 // @grant        GM_xmlhttpRequest
 // @connect      api.openai.com
 // ==/UserScript==
-var YOUR_API_KEY = "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"; // 使用您的API密钥
+var YOUR_API_KEY = "sk-"; // 使用您的API密钥
 (function() {
     'use strict';
     var currentSource = null;
@@ -233,7 +233,7 @@ function styleSelect(wrapper, select) {
     var voiceSelect = createVoiceSelect();
     controlPanel.appendChild(voiceSelect.wrapper);
 function textToSpeech(s) {
-    var sModelId = "tts-1";
+    var sModelId = "tts-1-hd";
     var sVoiceId = voiceSelect.select.value;
     var API_KEY = YOUR_API_KEY
 
