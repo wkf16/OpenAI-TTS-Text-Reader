@@ -4,6 +4,8 @@
 // @version      2.6
 // @description  Read selected text with OpenAI's TTS API and adjustable volume and speed
 // @include      *
+// @author       wkf16
+// @license      MIT
 // @grant        GM_xmlhttpRequest
 // @connect      api.openai.com
 // ==/UserScript==
