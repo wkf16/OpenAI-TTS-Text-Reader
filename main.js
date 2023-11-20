@@ -167,7 +167,7 @@ var YOUR_API_KEY = "sk-"; // 使用您的API密钥
 function createVoiceSelect() {
     var selectWrapper = document.createElement("div");
     var select = document.createElement("select");
-    var voices = ["alloy", "echo", "fable", "onyx", "nova", "shimmer"];
+    var voices = [ "onyx", "alloy", "echo", "fable", "nova", "shimmer"];
 
     for (var i = 0; i < voices.length; i++) {
         var option = document.createElement("option");
