@@ -1,13 +1,17 @@
 // ==UserScript==
 // @name         OpenAI TTS Text Reader
 // @namespace    http://tampermonkey.net/
-// @version      2.6
-// @description  Read selected text with OpenAI's TTS API and adjustable volume and speed
+// @version      2.6.2
+// @description  Read selected text with OpenAI's TTS API and adjustable volume and speed.Please enter the apikey before using.
+// @description:zh-CN 使用openai的tts-1阅读选定的文本。使用前请填入apikey
+// @description:ja OpenAI‐TTS‐1を使用して選択したテキストを読む。使用する前にapikeyを入力してください
 // @include      *
 // @author       wkf16
 // @license      MIT
 // @grant        GM_xmlhttpRequest
 // @connect      api.openai.com
+// @downloadURL  https://greasyfork.org/scripts/480382/
+// @antifeature cross-domain This script makes cross-domain API calls to OpenAI's TTS service, which may have implications for data security and privacy.
 // ==/UserScript==
 var YOUR_API_KEY = "sk-"; // 使用您的API密钥
 (function() {
@@ -169,7 +173,7 @@ var YOUR_API_KEY = "sk-"; // 使用您的API密钥
 function createVoiceSelect() {
     var selectWrapper = document.createElement("div");
     var select = document.createElement("select");
-    var voices = [ "onyx", "alloy", "echo", "fable", "nova", "shimmer"];
+    var voices = ["nova", "onyx", "alloy", "echo", "fable", "shimmer"];
 
     for (var i = 0; i < voices.length; i++) {
         var option = document.createElement("option");
@@ -235,7 +239,7 @@ function styleSelect(wrapper, select) {
     var voiceSelect = createVoiceSelect();
     controlPanel.appendChild(voiceSelect.wrapper);
 function textToSpeech(s) {
-    var sModelId = "tts-1-hd";
+    var sModelId = "tts-1";
     var sVoiceId = voiceSelect.select.value;
     var API_KEY = YOUR_API_KEY
 
