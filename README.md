@@ -46,3 +46,8 @@ Note: Make sure to select text before clicking the button.
 5. 使用控制面板调整音量和速度。
 
 注意： 在单击按钮之前，请确保选择了文本。
+___
+## TODO
+- [ ] 实现api_key储存面板。
+- [ ] 实现剪贴板or选中文本切换按钮。
+- [ ] 实现长文本分段发送请求。
